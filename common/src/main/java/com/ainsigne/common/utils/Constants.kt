@@ -36,7 +36,7 @@ const val US = "us"
 /**
  * Canada country code
  */
-const val CANADA = "canada"
+const val CANADA = "ca"
 
 fun placeholder(): () -> Unit {
     return { Timber.d(" Placeholder ") }

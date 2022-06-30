@@ -17,6 +17,10 @@ class HomeViewModel @Inject constructor(
     private val appRepository: AppRepository,
     private val headlineRepository: HeadlineRepository
 ) : ViewModel() {
+
+    private val _countryCodeLiveData = SingleLiveEvent<NetworkStatus<String>>()
+    val countryCodeLiveData: LiveData<NetworkStatus<String>> = _countryCodeLiveData
+
     private val _countryCodeSavedLiveData = SingleLiveEvent<NetworkStatus<Boolean>>()
     val countryCodeSavedLiveData: LiveData<NetworkStatus<Boolean>> = _countryCodeSavedLiveData
 
@@ -26,12 +30,26 @@ class HomeViewModel @Inject constructor(
 
     fun saveCountryCode(countryCode: String) {
         viewModelScope.launch(
-            CoroutineExceptionHandler { _, _ ->
+            CoroutineExceptionHandler { _, error ->
+                _countryCodeSavedLiveData.postValue(NetworkStatus.Error(error.message))
             }
         ) {
             appRepository.saveCountryCode(countryCode).collect {
                 _countryCodeSavedLiveData.postValue(it)
-                refreshArticles()
+                forceRefreshArticles()
+            }
+        }
+    }
+
+    fun refreshCountryCode() {
+        viewModelScope.launch(
+            CoroutineExceptionHandler { _, error ->
+                _countryCodeLiveData.postValue(NetworkStatus.Error(error.message))
+            }
+        ) {
+            appRepository.getCountryCode().collect {
+                _countryCodeLiveData.postValue(it)
+                forceRefreshArticles()
             }
         }
     }
