@@ -33,6 +33,19 @@ class MainActivity : BaseActivity(), NavigationCallback {
      */
     private var navigationViewModel = NavigationCoordinatorViewModel()
 
+    /**
+     * setups the navigation view model to be initialized
+     * @param navigationViewModel [NavigationCoordinatorViewModel] the viewmodel to initialized with
+     * @param navigationCollection [NavigationCollection] collection to modularize navigation
+     */
+    fun setupNavigationViewModel(
+        navigationViewModel: NavigationCoordinatorViewModel,
+        navigationCollection: NavigationCollection
+    ) {
+        this.navigationViewModel = navigationViewModel
+        this.navigationCollection = navigationCollection
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

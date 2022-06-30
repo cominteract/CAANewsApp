@@ -28,8 +28,8 @@ import kotlin.math.roundToInt
  */
 fun ImageView.toRoundImage(
     url: String?,
-    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty_white,
-    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty_white,
+    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty,
+    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty,
 ) {
     val requestOptions = RequestOptions()
         .circleCrop()
@@ -77,8 +77,8 @@ fun ImageView.loadHex(
  */
 fun ImageView.loadUrl(
     url: String?,
-    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty_white,
-    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty_white,
+    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty,
+    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty,
     @DimenRes radius: Int? = null,
 ) {
     val requestOptions = RequestOptions()
@@ -112,8 +112,8 @@ fun ImageView.loadUrl(
  */
 fun ImageView.loadUrlListener(
     url: String?,
-    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty_white,
-    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty_white,
+    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty,
+    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty,
     @DimenRes radius: Int? = null,
     block: (Drawable?) -> Unit,
 ) {
@@ -166,9 +166,9 @@ fun ImageView.loadUrlListener(
  * @param radius [Int] radius for how rounded the imageview will be
  */
 fun ImageView.loadImage(
-    image: Int = com.ainsigne.ui.R.drawable.image_empty_white,
-    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty_white,
-    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty_white,
+    image: Int = com.ainsigne.ui.R.drawable.image_empty,
+    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty,
+    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty,
     @DimenRes radius: Int? = null,
 ) {
     val requestOptions = RequestOptions()
@@ -200,8 +200,8 @@ fun ImageView.loadImage(
  */
 fun ImageView.loadBitmap(
     image: Bitmap?,
-    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty_white,
-    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty_white,
+    @DrawableRes placeholder: Int = com.ainsigne.ui.R.drawable.image_empty,
+    @DrawableRes error: Int = com.ainsigne.ui.R.drawable.image_empty,
     @DimenRes radius: Int? = null,
 ) {
     val requestOptions = RequestOptions()

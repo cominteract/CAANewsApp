@@ -41,7 +41,7 @@
         android:layout_marginHorizontal="@dimen/spacing_medium"
         android:adjustViewBounds="true"
         android:id="@+id/image_headline"
-        tools:src="@drawable/image_empty_white"
+        tools:src="@drawable/image_empty"
         app:layout_constraintDimensionRatio="H,1:1.50733"
         android:layout_width="0dp"
         android:layout_height="0dp" />
