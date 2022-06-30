@@ -1,6 +1,5 @@
-package com.ainsigne.caa_newsapp
+package com.ainsigne.ui
 
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
 import org.junit.Test
@@ -17,6 +16,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.ainsigne.caa_newsapp", appContext.packageName)
+        assertEquals("com.ainsigne.ui.test", appContext.packageName)
     }
 }

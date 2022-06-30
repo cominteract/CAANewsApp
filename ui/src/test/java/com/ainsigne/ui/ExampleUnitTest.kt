@@ -1,4 +1,4 @@
-package com.ainsigne.caa_newsapp
+package com.ainsigne.ui
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

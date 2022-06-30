@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="red">#f00</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="palette_primary">@color/palette_red_100</color>
+
+    <color name="palette_black_100">#333333</color>
+    <color name="palette_black_200">#737373</color>
+    <color name="palette_black_300">#838485</color>
+
+    <color name="palette_red_100">#e50a15</color>
+    <color name="palette_red_200">#f6141d</color>
+    <color name="palette_red_300">#f47c79</color>
+
+    <color name="palette_blue_100">#526a92</color>
+    <color name="palette_blue_200">#497bba</color>
+    <color name="palette_blue_300">#5b86e6</color>
+
+    <color name="palette_yellow_100">#e0b96c</color>
+    <color name="palette_yellow_200">#f6d7a1</color>
+    <color name="palette_yellow_300">#e0cfab</color>
+
+
+
+    <color name="palette_green_100">#307449</color>
+    <color name="palette_green_200">#00d950</color>
+    <color name="palette_green_300">#6bc89c</color>
+
+    <color name="palette_dim_100">#1a000000</color>
+    <color name="palette_dim_200">#e6c6323A</color>
+
+    <color name="palette_shadow_100">#00000029</color>
+    <color name="palette_shadow_200">#d3d3d3</color>
+    <color name="palette_shadow_300">#0000004d</color>
+
+</resources>
