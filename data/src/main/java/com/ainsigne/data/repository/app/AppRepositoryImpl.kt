@@ -9,7 +9,6 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 
-
 /**
  * App repository for local and remote resource related data
  * @param dataStore for user profile preferences related requests
@@ -35,5 +34,4 @@ class AppRepositoryImpl(val dataStore: CAANewsAppDataStore) : AppRepository {
     override suspend fun getCountryCode(): Flow<NetworkStatus<String>> {
         return flowOf(NetworkStatus.Success(dataStore.getValue(DataStoreKeys.KEY_PROFILE_COUNTRY_CODE).orEmpty()))
     }
-
 }

@@ -25,7 +25,6 @@ abstract class CAANewsAppDatabase : RoomDatabase() {
      */
     abstract fun headlineDao(): HeadlineDao
 
-
     companion object {
         /**
          * Database name

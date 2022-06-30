@@ -6,7 +6,6 @@ import com.ainsigne.common.utils.SOCKET_TIME_OUT_EXCEPTION
 import com.ainsigne.common.utils.UNKNOWN_HOST_EXCEPTION
 import com.ainsigne.common.utils.UNKNOWN_NETWORK_EXCEPTION
 import com.ainsigne.common.utils.network.NetworkStatus
-import com.google.gson.Gson
 import retrofit2.HttpException
 import retrofit2.Response
 import timber.log.Timber
@@ -52,4 +51,3 @@ suspend fun <T : Any> safeApiCall(call: suspend () -> Response<T>): NetworkStatu
         }
     }
 }
-

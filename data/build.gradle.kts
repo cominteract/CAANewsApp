@@ -38,7 +38,6 @@ android {
                 "\"${configuration.PROD.API_BASE_KEY}\""
             )
         }
-
     }
 }
 

@@ -33,5 +33,4 @@ interface HeadlineDao {
      */
     @Query("DELETE FROM news_article_list")
     suspend fun deleteArticles(): Int
-
 }

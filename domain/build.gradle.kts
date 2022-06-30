@@ -19,7 +19,6 @@ android {
         create("prod") {
             dimension = "caa_newsapp"
         }
-
     }
 }
 

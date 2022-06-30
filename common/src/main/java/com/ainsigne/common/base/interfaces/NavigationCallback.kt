@@ -1,6 +1,5 @@
 package com.ainsigne.common.base.interfaces
 
-import androidx.navigation.NavController
 import com.ainsigne.common.Navigation
 
 /**
@@ -14,5 +13,4 @@ interface NavigationCallback {
      * @param data [T] optional data to be passed while navigating
      */
     fun <T> navigateWith(navigation: Navigation, data: T?)
-
 }

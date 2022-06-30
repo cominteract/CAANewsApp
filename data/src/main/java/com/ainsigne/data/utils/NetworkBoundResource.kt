@@ -1,6 +1,5 @@
 package com.ainsigne.data.utils
 
-
 import com.ainsigne.common.utils.CONNECT_EXCEPTION
 import com.ainsigne.common.utils.FAILED_CONNECT_EXCEPTION
 import com.ainsigne.common.utils.GENERAL_EXCEPTION

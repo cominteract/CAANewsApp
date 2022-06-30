@@ -24,5 +24,4 @@ sealed class Navigation {
      * @param navigation [HomeNavigation] Home navigation enums
      */
     data class Home(val navigation: HomeNavigation) : Navigation()
-
 }

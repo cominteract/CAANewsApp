@@ -2,8 +2,8 @@ package com.ainsigne.common.utils.extension
 
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
-import com.ainsigne.ui.R
 import com.ainsigne.common.base.ui.BaseActivity
+import com.ainsigne.ui.R
 import com.ainsigne.ui.dialog.ConfirmationDialogFragment
 import com.ainsigne.ui.domain.ConfirmationType
 import com.ainsigne.ui.domain.DialogData

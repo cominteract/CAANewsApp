@@ -2,8 +2,6 @@ package com.ainsigne.common.utils.ui
 
 import android.os.Handler
 import android.os.Looper
-import java.util.Timer
-import kotlin.concurrent.scheduleAtFixedRate
 
 /**
  * Delay Helper allows delay actions.
@@ -47,6 +45,4 @@ object DelayHelper {
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({ action() }, delay)
     }
-
-
 }

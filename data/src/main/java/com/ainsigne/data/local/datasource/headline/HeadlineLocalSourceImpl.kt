@@ -3,8 +3,7 @@ package com.ainsigne.data.local.datasource.headline
 import com.ainsigne.data.local.room.headline.HeadlineDao
 import com.ainsigne.domain.entities.ArticleDomainEntities
 
-
-class HeadlineLocalSourceImpl(val headlineDao: HeadlineDao) : HeadlineLocalSource{
+class HeadlineLocalSourceImpl(val headlineDao: HeadlineDao) : HeadlineLocalSource {
     /**
      * Retrieve articles data from local db
      * @return [List] [ArticleDomainEntities.Article] articles data cached in db

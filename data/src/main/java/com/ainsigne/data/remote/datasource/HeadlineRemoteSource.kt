@@ -11,5 +11,4 @@ interface HeadlineRemoteSource {
      * @return [ArticleDomainEntities.ArticlesResponse] when top headlines exist
      */
     suspend fun retrieveTopHeadlines(countryCode: String): NetworkStatus<ArticleDomainEntities.ArticlesResponse>
-
 }

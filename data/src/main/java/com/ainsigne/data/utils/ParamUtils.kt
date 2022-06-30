@@ -20,4 +20,3 @@ suspend fun CAANewsAppDataStore.getCode(): String {
 suspend fun CAANewsAppDataStore.getHeadlineRefresh(): Long? {
     return getValue(DataStoreKeys.KEY_REFRESH_HEADLINE)
 }
-

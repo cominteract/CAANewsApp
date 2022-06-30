@@ -219,9 +219,9 @@ abstract class BaseFragment<VB : ViewBinding>(
 
     private fun handleStatusError(result: NetworkStatus<*>, status: BaseDataEntities.Status) {
         result.code?.let { code ->
-           if (status.isHandlingError) {
+            if (status.isHandlingError) {
                 handleErrorResult(result, status.isNeedToRefresh)
-           }
+            }
         } ?: kotlin.run {
             if (status.isHandlingError) {
                 handleErrorResult(result, status.isNeedToRefresh)
@@ -253,7 +253,6 @@ abstract class BaseFragment<VB : ViewBinding>(
             }
         }
     }
-
 
     override fun actionBarTitle(): String = EMPTY
 

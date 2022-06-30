@@ -1,6 +1,5 @@
 package com.ainsigne.data.repository.headline
 
-import com.ainsigne.common.utils.extension.EMPTY
 import com.ainsigne.common.utils.extension.compareExceedingMinutes
 import com.ainsigne.common.utils.network.NetworkStatus
 import com.ainsigne.data.local.datasource.headline.HeadlineLocalSource
@@ -28,7 +27,6 @@ class HeadlineRepositoryImpl(
     private val dataStore: CAANewsAppDataStore,
     private val timeLocalSource: TimeLocalSource
 ) : HeadlineRepository {
-
 
     override suspend fun forceRefreshHeadlines(): Flow<Boolean> {
         dataStore.write(DataStoreKeys.KEY_REFRESH_HEADLINE, timeLocalSource.getCurrentTime(TimeSource.FORCE_REFRESH))
@@ -73,6 +71,4 @@ class HeadlineRepositoryImpl(
     private val minutesExceeded = runBlocking {
         dataStore.getHeadlineRefresh()?.compareExceedingMinutes(timeLocalSource.getCurrentTime(TimeSource.FETCH_OR_CLEAR)) ?: true
     }
-
-
 }

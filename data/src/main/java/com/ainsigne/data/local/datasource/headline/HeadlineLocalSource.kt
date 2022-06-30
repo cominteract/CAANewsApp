@@ -2,7 +2,6 @@ package com.ainsigne.data.local.datasource.headline
 
 import com.ainsigne.domain.entities.ArticleDomainEntities
 
-
 interface HeadlineLocalSource {
     /**
      * Retrieve articles data from local db
