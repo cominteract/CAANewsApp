@@ -16,7 +16,7 @@ import com.ainsigne.common.base.interfaces.NavigationCallback
 import com.ainsigne.common.base.ui.BaseActivity
 import com.ainsigne.common.utils.extension.center
 import com.ainsigne.common.utils.extension.toPx
-import timber.log.Timber
+import com.ainsigne.common.utils.placeholder
 
 /**
  * Current main entry point for all fragments/views
@@ -33,11 +33,23 @@ class MainActivity : BaseActivity(), NavigationCallback {
      */
     private var navigationViewModel = NavigationCoordinatorViewModel()
 
+    /**
+     * setups the navigation view model to be initialized
+     * @param navigationViewModel [NavigationCoordinatorViewModel] the viewmodel to initialized with
+     * @param navigationCollection [NavigationCollection] collection to modularize navigation
+     */
+    fun setupNavigationViewModel(
+        navigationViewModel: NavigationCoordinatorViewModel,
+        navigationCollection: NavigationCollection
+    ) {
+        this.navigationViewModel = navigationViewModel
+        this.navigationCollection = navigationCollection
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-
 
         progressBar = ProgressBar(this, null, android.R.attr.progressBarStyleSmall)
         progressBar?.center(
@@ -80,7 +92,7 @@ class MainActivity : BaseActivity(), NavigationCallback {
         isRefreshShown: Boolean,
         block: (() -> Unit)?,
     ) {
-
+        placeholder()
     }
 
     override fun hidewNotifyBar() {

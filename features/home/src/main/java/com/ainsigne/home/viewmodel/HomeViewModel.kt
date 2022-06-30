@@ -24,7 +24,6 @@ class HomeViewModel @Inject constructor(
     private val _countryCodeSavedLiveData = SingleLiveEvent<NetworkStatus<Boolean>>()
     val countryCodeSavedLiveData: LiveData<NetworkStatus<Boolean>> = _countryCodeSavedLiveData
 
-
     private val _articlesLiveData = SingleLiveEvent<NetworkStatus<List<ArticleDomainEntities.Article>>>()
     val articlesLiveData: LiveData<NetworkStatus<List<ArticleDomainEntities.Article>>> = _articlesLiveData
 

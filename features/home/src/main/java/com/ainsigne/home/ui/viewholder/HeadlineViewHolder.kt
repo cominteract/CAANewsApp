@@ -6,7 +6,6 @@ import com.ainsigne.common.utils.extension.setOnSingleClickListener
 import com.ainsigne.domain.entities.ArticleDomainEntities
 import com.ainsigne.home.databinding.ItemArticleBinding
 
-
 class HeadlineViewHolder(
     private val binding: ItemArticleBinding
 ) : RecyclerView.ViewHolder(binding.root) {

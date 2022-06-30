@@ -4,6 +4,7 @@ import androidx.annotation.IdRes
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.ainsigne.common.utils.ui.viewmodel.SingleLiveEvent
+import com.ainsigne.domain.navigation.ArticleDetails
 
 /**
  * Navigation Coordinator Viewmodel for coordinating all the navigations within the app
@@ -43,10 +44,8 @@ class NavigationCoordinatorViewModel : ViewModel() {
     fun splashToHome() {
         _navigation.value = NavigationCoordinator.SplashToHome
     }
-//
-//    fun homeToFavorites() {
-//        _navigation.value = NavigationCoordinator.HomeToFavorites
-//    }
 
-
+    fun homeToDetails(data: ArticleDetails?) {
+        _navigation.value = NavigationCoordinator.HomeToDetails(data)
+    }
 }

@@ -107,6 +107,7 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":features:home"))
     implementation(project(":features:splash"))
+    implementation(project(":features:details"))
     implementation(Libraries.appCompat)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.materialDesign)
