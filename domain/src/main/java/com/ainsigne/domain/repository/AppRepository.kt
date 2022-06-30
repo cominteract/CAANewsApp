@@ -17,5 +17,4 @@ interface AppRepository {
      * @return [String] country code that is already saved
      */
     suspend fun getCountryCode(): Flow<NetworkStatus<String>>
-
 }
