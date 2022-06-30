@@ -28,7 +28,6 @@ import com.ainsigne.common.utils.network.NetworkStateManager
 import com.ainsigne.common.utils.network.NetworkStatus
 import com.ainsigne.common.utils.placeholder
 import com.ainsigne.common.utils.ui.DelayHelper
-import com.wellbet.common.navigation.CustomNavigation
 
 /**
  * Common fragment setup with utility to hide/show keyboard

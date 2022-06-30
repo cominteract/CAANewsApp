@@ -1,6 +1,6 @@
 package com.ainsigne.common
 
-import com.wellbet.common.navigation.CustomNavigation
+import com.ainsigne.common.navigation.CustomNavigation
 import com.ainsigne.common.navigation.HomeNavigation
 import com.ainsigne.common.navigation.SplashNavigation
 

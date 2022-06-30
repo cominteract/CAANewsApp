@@ -17,6 +17,11 @@ sealed class NetworkStatus<T>(
     class Success<T>(data: T?) : NetworkStatus<T>(data)
 
     /**
+     * Network state when fetch or process is successful
+     * @param data [T] data type to return when successful
+     */
+    class LocalSuccess<T>(data: T?) : NetworkStatus<T>(data)
+    /**
      * Network state when failed
      * @param errorMessage [String] error message to return when failed
      */
