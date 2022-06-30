@@ -37,12 +37,12 @@ class NavigationCoordinatorViewModel : ViewModel() {
         _navigation.value = NavigationCoordinator.NavigateUp
     }
 
-//    /**
-//     * Splash Navigation Methods
-//     */
-//    fun splashToHome() {
-//        _navigation.value = NavigationCoordinator.SplashToHome
-//    }
+    /**
+     * Splash Navigation Methods
+     */
+    fun splashToHome() {
+        _navigation.value = NavigationCoordinator.SplashToHome
+    }
 //
 //    fun homeToFavorites() {
 //        _navigation.value = NavigationCoordinator.HomeToFavorites

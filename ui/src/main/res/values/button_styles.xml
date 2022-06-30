@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:background">@drawable/bg_rounded_button_selector</item>
+        <item name="android:letterSpacing">.04</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingTop">@dimen/spacing_small</item>
+        <item name="android:paddingBottom">@dimen/spacing_small</item>
+        <item name="android:textSize">@dimen/font_size_body</item>
+        <item name="android:textColor">@color/color_on_primary</item>
+    </style>
+
+    <style name="Button.Primary.Positive" parent="Button.Primary">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:background">@drawable/bg_rounded_dialog_positive_action_button_selector</item>
+        <item name="android:textColor">@color/color_on_primary</item>
+    </style>
+
+
+</resources>

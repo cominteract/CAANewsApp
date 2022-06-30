@@ -3,6 +3,7 @@ package com.ainsigne.caa_newsapp.navigation
 import android.os.Bundle
 import androidx.annotation.IdRes
 import androidx.navigation.NavDirections
+import com.ainsigne.splash.ui.SplashFragmentDirections
 
 /**
  * Navigation coordinnator that allows use of fragment directions to navigation
@@ -31,19 +32,19 @@ sealed class NavigationCoordinator(val navDirections: NavDirections? = null, val
     data class PopBackStackSpecific(@IdRes val destinationId: Int, val inclusive: Boolean = false) :
         NavigationCoordinator()
 
-//    /**
-//     * Splash to home page
-//     */
-//    object SplashToHome : NavigationCoordinator(
-//        SplashFragmentDirections.splashToHome()
-//    )
+    /**
+     * Splash to home page
+     */
+    object SplashToHome : NavigationCoordinator(
+        SplashFragmentDirections.splashToHome()
+    )
 //
 //
 //    /**
 //     * Home to details
 //     */
-//    object HomeToSmallGames : NavigationCoordinator(
-//        navId = dashboard.R.id.home_to_smallgames
-//    )
+//object SplashToHome : NavigationCoordinator(
+//    SplashFragmentDirections.splashToHome()
+//)
 
 }

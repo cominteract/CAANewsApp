@@ -1,4 +1,4 @@
-package com.wellbet.splash.di
+package com.ainsigne.home.di
 
 import androidx.lifecycle.ViewModel
 import com.ainsigne.common.scopes.ViewModelKey

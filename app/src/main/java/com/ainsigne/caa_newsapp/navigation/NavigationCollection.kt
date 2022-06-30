@@ -68,7 +68,7 @@ class NavigationCollection {
     ) {
         when (navigation) {
             Navigation.Home(HomeNavigation.HOME_TO_DETAILS) -> {
-                navigationViewModel.homeToDetails()
+
             }
             else -> {
                 Timber.d(" Unhandled Navigation $data")

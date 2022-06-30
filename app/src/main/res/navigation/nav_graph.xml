@@ -3,22 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/homeFragment"
         android:name="com.ainsigne.home.ui.HomeFragment"
         tools:layout="@layout/fragment_home">
 
     </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.ainsigne.caa_newsapp.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
 
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.ainsigne.splash.ui.SplashFragment"
+        tools:layout="@layout/fragment_splash">
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/splash_to_home"
+            app:destination="@id/homeFragment"
+            />
     </fragment>
+
 </navigation>

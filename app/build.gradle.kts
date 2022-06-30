@@ -106,6 +106,7 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":data"))
     implementation(project(":features:home"))
+    implementation(project(":features:splash"))
     implementation(Libraries.appCompat)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.materialDesign)
