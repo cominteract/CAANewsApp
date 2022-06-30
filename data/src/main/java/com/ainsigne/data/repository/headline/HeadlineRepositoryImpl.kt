@@ -8,6 +8,7 @@ import com.ainsigne.data.local.datasource.time.TimeSource
 import com.ainsigne.data.local.datastore.CAANewsAppDataStore
 import com.ainsigne.data.local.datastore.DataStoreKeys
 import com.ainsigne.data.remote.datasource.HeadlineRemoteSource
+import com.ainsigne.data.utils.getCode
 import com.ainsigne.data.utils.getHeadlineRefresh
 import com.ainsigne.data.utils.networkBoundResource
 import com.ainsigne.domain.entities.ArticleDomainEntities
@@ -36,7 +37,7 @@ class HeadlineRepositoryImpl(
     override suspend fun getHeadlines(): Flow<NetworkStatus<List<ArticleDomainEntities.Article>>> {
         return networkBoundResource(
             fetch = {
-                val countryCode = dataStore.getValue(DataStoreKeys.KEY_PROFILE_COUNTRY_CODE).orEmpty()
+                val countryCode = dataStore.getCode()
                 remoteSource.retrieveTopHeadlines(countryCode)
             },
             saveFetchResult = { articleResponse ->

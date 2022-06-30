@@ -30,11 +30,11 @@ sealed class ArticleDomainEntities {
         val id: Int,
         val title: String = EMPTY,
         val source: ArticleSource?,
-        val author: String = EMPTY,
-        val description: String = EMPTY,
-        val urlToImage: String = EMPTY,
-        val publishedAt: String = EMPTY,
-        val content: String = EMPTY
+        val author: String? = EMPTY,
+        val description: String? = EMPTY,
+        val urlToImage: String? = EMPTY,
+        val publishedAt: String? = EMPTY,
+        val content: String? = EMPTY
     )
 
     /**

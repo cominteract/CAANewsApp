@@ -12,6 +12,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Named
 import javax.inject.Singleton
@@ -66,10 +67,12 @@ class NetworkModule {
                 val request =
                     chain.request()
                 val url = request.url
-                val newRequest = url.newBuilder().addQueryParameter(
+                val newUrl = url.newBuilder().addQueryParameter(
                     "apiKey", token
                 ).build()
-                val response = chain.proceed(request.newBuilder().url(newRequest).build())
+                val newRequest = request.newBuilder().url(newUrl).build()
+
+                val response = chain.proceed(newRequest)
                 response
             }
             .connectTimeout(requestTimeOut.toLong(), TimeUnit.SECONDS)
