@@ -1,11 +1,11 @@
 package com.ainsigne.core.di.components
 
 import android.content.Context
-import com.ainsigne.domain.repository.AppRepository
-import com.ainsigne.domain.repository.HeadlineRepository
 import com.ainsigne.core.di.modules.CoreModule
 import com.ainsigne.core.di.modules.DatabaseModule
 import com.ainsigne.data.di.DataModule
+import com.ainsigne.domain.repository.AppRepository
+import com.ainsigne.domain.repository.HeadlineRepository
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -30,7 +30,6 @@ interface CoreComponent {
          */
         fun create(@BindsInstance context: Context): CoreComponent
     }
-
 
     // Headline repository definition
     val headlineRepository: HeadlineRepository

@@ -1,24 +1,17 @@
 package com.ainsigne.data.di
 
-import android.annotation.SuppressLint
 import android.content.Context
-import android.os.Build
-import android.provider.Settings
-import com.ainsigne.common.utils.extension.getVersion
 import com.ainsigne.data.local.datastore.CAANewsAppDataStore
 import com.ainsigne.data.remote.api.HeadlineService
-import com.ainsigne.data.utils.getCode
 import com.ainsigne.data.utils.json
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.ExperimentalSerializationApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Named
 import javax.inject.Singleton
@@ -63,11 +56,8 @@ class NetworkModule {
     @Singleton
     internal fun provideOkhttpClient(
         httpLoggingInterceptor: HttpLoggingInterceptor,
-        dataStore: CAANewsAppDataStore,
-        context: Context
     ): OkHttpClient {
-        val appVersion = context.applicationContext.getVersion().first
-        val versionCode = context.applicationContext.getVersion().second.toString()
+
         val token = "8250410cccae463c9629f914d101a063"
 
         val okHttpClient = OkHttpClient.Builder()
@@ -98,7 +88,7 @@ class NetworkModule {
     @Named("wb_base")
     @Provides
     @Singleton
-    internal fun provideRetrofit(okHttpClient: OkHttpClient, dataStore: CAANewsAppDataStore): Retrofit {
+    internal fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
 
         return Retrofit.Builder()
             .baseUrl(com.ainsigne.data.BuildConfig.API_BASE_URL)
@@ -119,5 +109,4 @@ class NetworkModule {
     fun provideHeadlineService(@Named("wb_base") retrofit: Retrofit): HeadlineService {
         return retrofit.create(HeadlineService::class.java)
     }
-
 }

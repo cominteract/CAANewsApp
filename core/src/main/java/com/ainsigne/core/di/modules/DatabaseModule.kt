@@ -35,5 +35,4 @@ class DatabaseModule {
     @Provides
     fun provideHeadlineDao(db: CAANewsAppDatabase):
         HeadlineDao = db.headlineDao()
-
 }

@@ -99,7 +99,12 @@ spotless {
 }
 
 dependencies {
+    implementation(project(":ui"))
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(":core"))
+    implementation(project(":common"))
+    implementation(project(":domain"))
+    implementation(project(":data"))
     implementation(Libraries.appCompat)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.materialDesign)
