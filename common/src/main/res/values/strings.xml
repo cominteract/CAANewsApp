@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="forbidden_error">Forbidden error is encountered</string>
+    <string name="maintenance_error">Maintenance error is encountered</string>
+    <string name="unauthorized_error">Unauthorized error is encountered</string>
+    <string name="unnamed_error">Unnamed error is encountered</string>
+    <string name="internet_is_lost">Network connection is lost</string>
+    <string name="server_connection_is_lost">Server connection is lost</string>
+    <string name="internet_is_found">Network reconnected</string>
+    <string name="snackbar_refresh">Refresh</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+</resources>
