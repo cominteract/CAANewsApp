@@ -18,7 +18,6 @@ android {
         create("prod") {
             dimension = "caa_newsapp"
         }
-
     }
     buildFeatures {
         viewBinding = true

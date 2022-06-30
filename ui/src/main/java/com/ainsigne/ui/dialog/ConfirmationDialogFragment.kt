@@ -14,7 +14,6 @@ import com.ainsigne.ui.R
 import com.ainsigne.ui.domain.ConfirmationType
 import com.ainsigne.ui.domain.DialogData
 
-
 class ConfirmationDialogFragment(private var confirmationData: DialogData) : DialogFragment() {
 
     fun updateDialogData(confirmationData: DialogData) {
