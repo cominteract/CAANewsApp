@@ -15,7 +15,6 @@ import androidx.core.content.ContextCompat
 import com.ainsigne.common.base.domain.SnackToastMessage
 import com.ainsigne.common.base.interfaces.UITransitionCallback
 
-
 /**
  * Common activity setup with utility to hide/show keyboard
  * and easily show toasts/snackbars

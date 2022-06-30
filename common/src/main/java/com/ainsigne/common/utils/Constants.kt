@@ -2,6 +2,11 @@ package com.ainsigne.common.utils
 
 import timber.log.Timber
 
+/**
+ * Target minutes
+ */
+const val TARGET_MINUTES = 2
+
 const val PING_SERVER_URL = "https://google.com"
 
 const val SOCKET_TIME_OUT_EXCEPTION = "Request timed out while trying to connect. Please ensure you have a strong signal and try again."
@@ -22,6 +27,16 @@ const val MAX_RETRY_LIMIT = 3
 
 // Default delay
 const val DEFAULT_DELAY: Long = 2000
+
+/**
+ * US country code
+ */
+const val US = "us"
+
+/**
+ * Canada country code
+ */
+const val CANADA = "canada"
 
 fun placeholder(): () -> Unit {
     return { Timber.d(" Placeholder ") }

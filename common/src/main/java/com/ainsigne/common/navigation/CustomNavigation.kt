@@ -1,4 +1,4 @@
-package com.wellbet.common.navigation
+package com.ainsigne.common.navigation
 /**
  * Custom navigation instance
  */

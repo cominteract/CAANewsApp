@@ -83,7 +83,6 @@ fun getConfirmationDialogDefault(confirmationData: DialogData?): ConfirmationDia
     null
 }
 
-
 fun BaseFragment<*>.willFinish(fragmentSize: Int): Boolean {
     return maxRetry >= MAX_RETRY_LIMIT && fragmentSize == 1
 }

@@ -2,7 +2,6 @@ package com.ainsigne.common.base.interfaces
 
 import com.ainsigne.common.base.domain.BaseDataEntities
 
-
 /**
  * Status Callback that handles status changes
  */
