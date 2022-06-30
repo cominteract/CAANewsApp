@@ -5,6 +5,7 @@ import com.ainsigne.common.Navigation
 import com.ainsigne.common.navigation.CustomNavigation
 import com.ainsigne.common.navigation.HomeNavigation
 import com.ainsigne.common.navigation.SplashNavigation
+import com.ainsigne.domain.navigation.ArticleDetails
 import timber.log.Timber
 
 /**
@@ -68,7 +69,7 @@ class NavigationCollection {
     ) {
         when (navigation) {
             Navigation.Home(HomeNavigation.HOME_TO_DETAILS) -> {
-
+                navigationViewModel.homeToDetails(data as ArticleDetails?)
             }
             else -> {
                 Timber.d(" Unhandled Navigation $data")

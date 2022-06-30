@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/container_headline_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_headline"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:layout_width="0dp"
+        android:layout_height="156dp" >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_headline_title"
+            tools:text="卡片窗口 高频开奖频开奖频开奖"
+            android:maxLines="2"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_x_small"
+            style="@style/Text.Body.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_headline_caption"
+            tools:text="卡片窗口 高频开奖频开奖频开奖"
+            style="@style/Text.Label.Secondary"
+            android:maxLines="3"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        app:layout_constraintTop_toTopOf="@id/container_headline_text"
+        app:layout_constraintBottom_toBottomOf="@id/container_headline_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        android:adjustViewBounds="true"
+        android:id="@+id/image_headline"
+        tools:src="@drawable/image_empty_white"
+        app:layout_constraintDimensionRatio="H,1:1.50733"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        app:layout_constraintTop_toBottomOf="@id/image_headline"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        style="@style/Text.Label"
+        android:id="@+id/text_article_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        app:layout_constraintTop_toBottomOf="@id/text_article_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        style="@style/Text.Body.Dark"
+        android:id="@+id/text_article_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textview.MaterialTextView
+        app:layout_constraintTop_toBottomOf="@id/text_article_author"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        style="@style/Text.Body.Primary"
+        android:id="@+id/text_article_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

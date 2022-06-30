@@ -1,7 +1,10 @@
 package com.ainsigne.home.ui
 
 import android.content.Context
+import com.ainsigne.common.Navigation
 import com.ainsigne.common.base.ui.BaseFragment
+import com.ainsigne.common.navigation.HomeNavigation
+import com.ainsigne.common.navigation.SplashNavigation
 import com.ainsigne.common.utils.CANADA
 import com.ainsigne.common.utils.US
 import com.ainsigne.common.utils.extension.activity
@@ -9,6 +12,7 @@ import com.ainsigne.common.utils.extension.setOnSingleClickListener
 import com.ainsigne.common.utils.extension.showError
 import com.ainsigne.common.utils.network.NetworkStatus
 import com.ainsigne.core.di.coreComponent
+import com.ainsigne.domain.navigation.ArticleDetails
 import com.ainsigne.home.R
 import com.ainsigne.home.databinding.FragmentHomeBinding
 import com.ainsigne.home.di.DaggerHomeComponent
@@ -25,7 +29,17 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(
     lateinit var viewModel: HomeViewModel
 
     val adapter = HeadlineAdapter {
-
+        navigationCallback?.navigateWith(
+            Navigation.Home(HomeNavigation.HOME_TO_DETAILS),
+            ArticleDetails(
+                title = it.title,
+                author = it.author,
+                description = it.description,
+                content = it.content,
+                urlToImage = it.urlToImage,
+                publishedAt = it.publishedAt
+            )
+        )
     }
 
     override fun initializeUI() {

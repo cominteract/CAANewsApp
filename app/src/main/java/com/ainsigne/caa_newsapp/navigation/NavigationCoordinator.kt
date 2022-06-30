@@ -3,6 +3,8 @@ package com.ainsigne.caa_newsapp.navigation
 import android.os.Bundle
 import androidx.annotation.IdRes
 import androidx.navigation.NavDirections
+import com.ainsigne.domain.navigation.ArticleDetails
+import com.ainsigne.home.ui.HomeFragmentDirections
 import com.ainsigne.splash.ui.SplashFragmentDirections
 
 /**
@@ -43,8 +45,8 @@ sealed class NavigationCoordinator(val navDirections: NavDirections? = null, val
 //    /**
 //     * Home to details
 //     */
-//object SplashToHome : NavigationCoordinator(
-//    SplashFragmentDirections.splashToHome()
-//)
+    data class HomeToDetails(val details: ArticleDetails?) : NavigationCoordinator(
+        HomeFragmentDirections.homeToDetails(details)
+    )
 
 }
