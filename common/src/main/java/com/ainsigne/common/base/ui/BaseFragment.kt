@@ -114,6 +114,10 @@ abstract class BaseFragment<VB : ViewBinding>(
         super.onViewCreated(view, savedInstanceState)
         initializeUI()
         initializeObservers()
+        activity().updateStatusBarColor(
+            window = activity().window,
+            color = com.ainsigne.ui.R.color.text_dropdown_selected_primary
+        )
         val viewClickable = if (binding.root is NestedScrollView) {
             (binding.root as NestedScrollView).getChildAt(0)
         } else {

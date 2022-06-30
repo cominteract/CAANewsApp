@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.AppCompatImageView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:src="@color/design_default_color_secondary_variant"
+    android:src="@drawable/ic_newsapp"
+    android:background="@color/text_primary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.SplashFragment" />

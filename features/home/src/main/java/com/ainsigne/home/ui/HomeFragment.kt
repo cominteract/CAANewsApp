@@ -4,6 +4,7 @@ import android.content.Context
 import com.ainsigne.common.base.ui.BaseFragment
 import com.ainsigne.common.utils.CANADA
 import com.ainsigne.common.utils.US
+import com.ainsigne.common.utils.extension.activity
 import com.ainsigne.common.utils.extension.setOnSingleClickListener
 import com.ainsigne.common.utils.extension.showError
 import com.ainsigne.common.utils.network.NetworkStatus

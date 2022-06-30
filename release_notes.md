@@ -4,3 +4,4 @@ June 29 2022
 - Data Module
 - Domain Module
 - Dependency Modules
+- Homepage Display
