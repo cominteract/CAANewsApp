@@ -3,3 +3,4 @@ June 29 2022
 - UI Module
 - Data Module
 - Domain Module
+- Dependency Modules

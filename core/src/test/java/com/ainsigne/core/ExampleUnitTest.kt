@@ -1,4 +1,4 @@
-package com.ainsigne.domain
+package com.ainsigne.core
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

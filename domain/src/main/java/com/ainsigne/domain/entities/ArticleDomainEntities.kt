@@ -25,7 +25,7 @@ sealed class ArticleDomainEntities {
      * @param publishedAt [String] date published
      */
     @Entity(tableName = "news_article_list")
-    data class Article (
+    data class Article(
         @PrimaryKey(autoGenerate = true)
         val id: Int,
         val title: String = EMPTY,
@@ -37,13 +37,12 @@ sealed class ArticleDomainEntities {
         val content: String = EMPTY
     )
 
-
     /**
      * Article source for where the article is referenced/based
      * @param name [String] the name of the reference
      */
 
-    data class ArticleSource (
+    data class ArticleSource(
         val id: String = EMPTY,
         val name: String = EMPTY
     )

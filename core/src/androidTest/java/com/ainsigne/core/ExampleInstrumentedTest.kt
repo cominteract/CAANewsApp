@@ -1,4 +1,4 @@
-package com.ainsigne.domain
+package com.ainsigne.core
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.ainsigne.domain.test", appContext.packageName)
+        assertEquals("com.ainsigne.core.test", appContext.packageName)
     }
 }
