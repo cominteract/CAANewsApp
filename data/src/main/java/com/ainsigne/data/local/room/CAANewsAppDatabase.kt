@@ -15,7 +15,7 @@ import com.ainsigne.domain.entities.ArticleDomainEntities
     entities = [
         ArticleDomainEntities.Article::class
     ],
-    version = 1, exportSchema = false
+    version = 3, exportSchema = false
 )
 @TypeConverters(Converters::class)
 abstract class CAANewsAppDatabase : RoomDatabase() {

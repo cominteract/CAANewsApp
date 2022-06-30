@@ -74,7 +74,7 @@ abstract class BaseFragment<VB : ViewBinding>(
             backPressedBlock = backButtonPressed()
         )
         this.uiTransitionCallback = activity()
-        this.uiTransitionCallback?.setupRefresh(false)
+        this.uiTransitionCallback?.setupRefresh(true)
         this.uiTransitionCallback?.onSwipeRefresh {
             if (initializeToBeRefresh() != noRefresh()) {
                 initializeToBeRefresh().invoke()
