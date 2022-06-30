@@ -4,10 +4,8 @@ import android.content.Context
 import com.ainsigne.common.Navigation
 import com.ainsigne.common.base.ui.BaseFragment
 import com.ainsigne.common.navigation.HomeNavigation
-import com.ainsigne.common.navigation.SplashNavigation
 import com.ainsigne.common.utils.CANADA
 import com.ainsigne.common.utils.US
-import com.ainsigne.common.utils.extension.activity
 import com.ainsigne.common.utils.extension.setOnSingleClickListener
 import com.ainsigne.common.utils.extension.showError
 import com.ainsigne.common.utils.network.NetworkStatus
@@ -19,7 +17,6 @@ import com.ainsigne.home.di.DaggerHomeComponent
 import com.ainsigne.home.ui.adapter.HeadlineAdapter
 import com.ainsigne.home.viewmodel.HomeViewModel
 import javax.inject.Inject
-
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(
     FragmentHomeBinding::inflate
@@ -67,7 +64,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(
                             R.id.button_toggle_us
                         )
                     }
-
                 }
             }
         }
@@ -101,6 +97,4 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(
         super.onAttach(context)
         DaggerHomeComponent.factory().create(coreComponent()).inject(this)
     }
-
-
 }

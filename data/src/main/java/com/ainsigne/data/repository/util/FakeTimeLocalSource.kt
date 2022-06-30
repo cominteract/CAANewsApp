@@ -4,7 +4,6 @@ import com.ainsigne.common.utils.TARGET_MINUTES
 import com.ainsigne.data.local.datasource.time.TimeLocalSource
 import com.ainsigne.data.local.datasource.time.TimeSource
 
-
 class FakeTimeLocalSource : TimeLocalSource {
 
     override fun getCurrentTime(timeSource: TimeSource): Long {

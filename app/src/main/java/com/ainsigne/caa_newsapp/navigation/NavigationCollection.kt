@@ -1,6 +1,5 @@
 package com.ainsigne.caa_newsapp.navigation
 
-
 import com.ainsigne.common.Navigation
 import com.ainsigne.common.navigation.CustomNavigation
 import com.ainsigne.common.navigation.HomeNavigation
@@ -76,5 +75,4 @@ class NavigationCollection {
             }
         }
     }
-
 }

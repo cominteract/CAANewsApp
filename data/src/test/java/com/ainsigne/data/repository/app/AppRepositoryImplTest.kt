@@ -16,8 +16,8 @@ import org.mockito.Mockito
 @DelicateCoroutinesApi
 @ExperimentalCoroutinesApi
 class AppRepositoryImplTest {
-    private lateinit var profileDataStore : CAANewsAppDataStore
-    lateinit var repository : AppRepository
+    private lateinit var profileDataStore: CAANewsAppDataStore
+    lateinit var repository: AppRepository
 
     @Before
     fun setup() {
@@ -56,5 +56,4 @@ class AppRepositoryImplTest {
             assert(repository.getCountryCode().last().data == US)
         }
     }
-
 }

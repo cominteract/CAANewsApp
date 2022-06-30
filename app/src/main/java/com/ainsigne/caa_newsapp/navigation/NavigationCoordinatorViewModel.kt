@@ -48,6 +48,4 @@ class NavigationCoordinatorViewModel : ViewModel() {
     fun homeToDetails(data: ArticleDetails?) {
         _navigation.value = NavigationCoordinator.HomeToDetails(data)
     }
-
-
 }

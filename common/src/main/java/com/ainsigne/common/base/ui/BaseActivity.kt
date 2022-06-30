@@ -112,11 +112,12 @@ abstract class BaseActivity : AppCompatActivity(), UITransitionCallback {
         }
     }
 
-
     fun updateStatusBarColor(window: Window, color: Int) {
         window.decorView.systemUiVisibility = 0
-        window.statusBarColor = ContextCompat.getColor(this,
-            color)
+        window.statusBarColor = ContextCompat.getColor(
+            this,
+            color
+        )
     }
 
     /**

@@ -4,7 +4,6 @@ import com.ainsigne.common.utils.US
 import com.ainsigne.common.utils.extension.compareExceedingMinutes
 import com.ainsigne.common.utils.network.NetworkStatus
 import com.ainsigne.data.local.datasource.headline.HeadlineLocalSource
-import com.ainsigne.data.local.datasource.headline.HeadlineLocalSourceImpl
 import com.ainsigne.data.local.datasource.time.TimeSource
 import com.ainsigne.data.local.datastore.CAANewsAppDataStore
 import com.ainsigne.data.local.datastore.DataStoreKeys
@@ -48,8 +47,6 @@ class HeadlineRepositoryImplTest {
             remoteSource = remoteSource,
             timeLocalSource = timeLocalSource
         )
-
-
     }
 
     @Test
@@ -81,10 +78,26 @@ class HeadlineRepositoryImplTest {
                 ArticleDomainEntities.Article(
                     id = 1,
                     title = "Sea Dogs defeat Bulldogs to capture 2nd Memorial Cup in franchise's 17-year history - CBC Sports",
-                    description = "Considered a long shot at the beginning of the Canadian Hockey League championship due to a first-round loss in the Quebec Major Junior Hockey League playoffs, the host Saint John Sea Dogs downed the Hamilton Bulldogs 6-3 in Wednesday's championship game",
-                    urlToImage = "https://i.cbc.ca/1.6506512.1656553746!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/memorial-cup-2022-sea-dogs-saint-john.jpg",
+                    description = "Considered a long" +
+                        " shot at the beginning of the Canadian Hockey League championship due to a first-round loss in the Quebec " +
+                        "Major Junior Hockey League playoffs, the " +
+                        "host Saint John Sea Dogs downed the Hamilton" +
+                        " Bulldogs 6-3 in Wednesday's championship game",
+                    urlToImage = "https://i.cbc.ca/1.6506512." +
+                        "1656553746!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/memorial-cup-2022-sea-dogs-saint-john.jpg",
                     publishedAt = "2022-06-30T01:54:00Z",
-                    content = "The Saint John Sea Dogs turned a devastating playoff loss into a Memorial Cup championship, thanks to renewed focus, 40 days of sweat and a university coach who pushed all the right buttons.\\r\\nConside… [+5750 chars]\"},{\"source\":{\"id\":null,\"name\":\"Ctvnews.ca\"},\"author\":null,\"title\":\"Flights, destinations 'likely' to be cancelled at Montreal airport - CTV News Montreal\",\"description\":\"Canadians flying out of the Montreal airport might be in for a bit of a shock this summer as the head of the Trudeau airport says airlines will \\\"likely\\\" be asked to cancel some flights — or even destinations altogether.",
+                    content = "The Saint John Sea Dogs turned a " +
+                        "devastating playoff loss into a" +
+                        " Memorial Cup championship, thanks to" +
+                        " renewed focus, 40 days of sweat and a university coach who" +
+                        " pushed all the right buttons.\\r\\nConside… [+5750 chars]\"}," +
+                        "{\"source\":{\"id\":null,\"name\":\"Ctvnews.ca\"},\"author\":null," +
+                        "\"title\":\"Flights, destinations 'likely' to be cancelled at Montreal " +
+                        "airport - CTV News Montreal\",\"description\":\"Canadians " +
+                        "flying out of the Montreal airport might be in for a bit of a shock " +
+                        "this summer as the head of the Trudeau airport" +
+                        " says airlines will \\\"likely\\\" be" +
+                        " asked to cancel some flights — or even destinations altogether.",
                     source = ArticleDomainEntities.ArticleSource(
                         id = "cbc-news",
                         name = "CBC News"
@@ -93,11 +106,28 @@ class HeadlineRepositoryImplTest {
                 ),
                 ArticleDomainEntities.Article(
                     id = 2,
-                    title = "Sea Dogs defeat Bulldogs to capture 2nd Memorial Cup in franchise's 17-year history - CBC Sports",
-                    description = "Considered a long shot at the beginning of the Canadian Hockey League championship due to a first-round loss in the Quebec Major Junior Hockey League playoffs, the host Saint John Sea Dogs downed the Hamilton Bulldogs 6-3 in Wednesday's championship game",
-                    urlToImage = "https://i.cbc.ca/1.6506512.1656553746!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/memorial-cup-2022-sea-dogs-saint-john.jpg",
+                    title = "Sea Dogs defeat Bulldogs to capture 2nd Memorial Cup in franchise's 17-year history" +
+                        " - CBC Sports",
+                    description = "Considered a long shot at the beginning of the Canadian Hockey" +
+                        " League championship due to a first-round" +
+                        " loss in the Quebec Major Junior Hockey League playoffs, the host " +
+                        "aint John Sea Dogs downed the Hamilton Bulldogs 6-3 in Wednesday's " +
+                        "championship game",
+                    urlToImage = "https://i.cbc.ca/1.6506512." +
+                        "1656553746!/fileImage/httpImage/image.jpg_gen/derivatives/16x9" +
+                        "_620/memorial-cup-2022-sea-dogs-saint-john.jpg",
                     publishedAt = "2022-06-30T01:54:00Z",
-                    content = "The Saint John Sea Dogs turned a devastating playoff loss into a Memorial Cup championship, thanks to renewed focus, 40 days of sweat and a university coach who pushed all the right buttons.\\r\\nConside… [+5750 chars]\"},{\"source\":{\"id\":null,\"name\":\"Ctvnews.ca\"},\"author\":null,\"title\":\"Flights, destinations 'likely' to be cancelled at Montreal airport - CTV News Montreal\",\"description\":\"Canadians flying out of the Montreal airport might be in for a bit of a shock this summer as the head of the Trudeau airport says airlines will \\\"likely\\\" be asked to cancel some flights — or even destinations altogether.",
+                    content = "The Saint John Sea Dogs turned a " +
+                        "devastating playoff loss into a Memorial Cup championship, " +
+                        "thanks to renewed focus," +
+                        " 40 days of sweat and a university coach who pushed all the " +
+                        "right buttons.\\r\\nConside… [+5750 chars]\"},{\"source\":{\"id\":null" +
+                        ",\"name\":\"Ctvnews.ca\"},\"author\":null,\"title\":\"Flights, destinations " +
+                        "'likely' to be cancelled at Montreal airport - " +
+                        "CTV News Montreal\",\"description\":\"Canadians flying out of the " +
+                        "Montreal airport might be in for a bit of a shock this summer as the " +
+                        "head of the Trudeau airport says airlines will \\\"likely\\\" be asked" +
+                        " to cancel some flights — or even destinations altogether.",
                     source = ArticleDomainEntities.ArticleSource(
                         id = "cbc-news",
                         name = "CBC News"

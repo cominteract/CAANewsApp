@@ -48,5 +48,4 @@ sealed class NavigationCoordinator(val navDirections: NavDirections? = null, val
     data class HomeToDetails(val details: ArticleDetails?) : NavigationCoordinator(
         HomeFragmentDirections.homeToDetails(details)
     )
-
 }

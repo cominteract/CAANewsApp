@@ -4,12 +4,13 @@ import android.annotation.SuppressLint
 import com.ainsigne.common.base.ui.BaseFragment
 import com.ainsigne.common.utils.extension.loadUrl
 import com.ainsigne.common.utils.extension.noRefresh
+import com.ainsigne.common.utils.placeholder
 import com.ainsigne.details.databinding.FragmentArticleDetailsBinding
 import com.ainsigne.domain.navigation.ArticleDetails
 import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.util.*
-
+import java.util.Date
+import java.util.TimeZone
 
 class ArticleDetailsFragment : BaseFragment<FragmentArticleDetailsBinding>(
     FragmentArticleDetailsBinding::inflate
@@ -22,7 +23,6 @@ class ArticleDetailsFragment : BaseFragment<FragmentArticleDetailsBinding>(
                 if (data is ArticleDetails) {
                     textArticleAuthor.text = data.author
                     textArticleContent.text = data.content
-
 
                     val formatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
                     formatter.timeZone = TimeZone.getTimeZone("UTC")
@@ -46,13 +46,10 @@ class ArticleDetailsFragment : BaseFragment<FragmentArticleDetailsBinding>(
     }
 
     override fun initializeObservers() {
-
+        placeholder()
     }
 
     override fun initializeToBeRefresh(): () -> Unit {
         return noRefresh()
     }
-
-
-
 }

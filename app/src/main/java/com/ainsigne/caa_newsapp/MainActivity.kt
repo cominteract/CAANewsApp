@@ -16,7 +16,7 @@ import com.ainsigne.common.base.interfaces.NavigationCallback
 import com.ainsigne.common.base.ui.BaseActivity
 import com.ainsigne.common.utils.extension.center
 import com.ainsigne.common.utils.extension.toPx
-import timber.log.Timber
+import com.ainsigne.common.utils.placeholder
 
 /**
  * Current main entry point for all fragments/views
@@ -50,7 +50,6 @@ class MainActivity : BaseActivity(), NavigationCallback {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-
 
         progressBar = ProgressBar(this, null, android.R.attr.progressBarStyleSmall)
         progressBar?.center(
@@ -93,7 +92,7 @@ class MainActivity : BaseActivity(), NavigationCallback {
         isRefreshShown: Boolean,
         block: (() -> Unit)?,
     ) {
-
+        placeholder()
     }
 
     override fun hidewNotifyBar() {

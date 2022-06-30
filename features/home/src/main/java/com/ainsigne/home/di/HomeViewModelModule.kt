@@ -3,7 +3,6 @@ package com.ainsigne.home.di
 import androidx.lifecycle.ViewModel
 import com.ainsigne.common.scopes.ViewModelKey
 import com.ainsigne.home.viewmodel.HomeViewModel
-
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
