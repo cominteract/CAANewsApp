@@ -12,12 +12,18 @@
         <action
             android:id="@+id/home_to_details"
             app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/pull_up_from_bottom"
+            app:exitAnim="@anim/pull_bottom_from_up"
+            app:popEnterAnim="@anim/pull_up_from_bottom"
+            app:popExitAnim="@anim/pull_bottom_from_up"
+
             />
     </fragment>
 
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.ainsigne.details.ArticleDetailsFragment"
+
         tools:layout="@layout/fragment_article_details">
         <argument
             android:name="articleData"
@@ -33,6 +39,12 @@
         <action
             android:id="@+id/splash_to_home"
             app:destination="@id/homeFragment"
+            app:enterAnim="@anim/pull_up_from_bottom"
+            app:exitAnim="@anim/pull_bottom_from_up"
+            app:popEnterAnim="@anim/pull_up_from_bottom"
+            app:popExitAnim="@anim/pull_bottom_from_up"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
             />
     </fragment>
 
