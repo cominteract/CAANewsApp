@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">@color/palette_primary</color>
+    <color name="color_on_primary">@color/white</color>
+
+    <color name="secondary">@color/palette_black_100</color> <!-- -->
+    <color name="color_on_secondary">@color/white</color> <!-- -->
+
+    <color name="accent">@color/palette_blue_200</color>
+
+    <color name="surface">@color/white</color>
+
+    <color name="bg_primary">@color/white</color>
+    <color name="bg_secondary">@color/palette_yellow_200</color>
+    <color name="bg_secondary_variant">@color/palette_yellow_300</color>
+    <color name="color_on_bg_primary">@color/text_primary</color>
+    <color name="bg_tertiary">@color/palette_blue_300</color>
+
+    <color name="inline_error">@color/palette_red_200</color> <!-- -->
+    <color name="color_on_error">@color/white</color>
+
+    <!-- text  -->
+    <color name="text_primary">@color/palette_black_100</color>
+    <color name="text_primary_variant">@color/palette_red_300</color>
+    <color name="text_secondary">@color/palette_black_200</color>
+    <color name="text_tertiary">@color/palette_black_300</color>
+    <color name="text_selection">@color/palette_blue_300</color>
+    <color name="text_label_primary">@color/palette_yellow_100</color>
+    <color name="text_label_secondary">@color/palette_yellow_200</color>
+    <color name="tag_primary">@color/palette_black_300</color>
+    <color name="text_label_tertiary">@color/palette_yellow_300</color>
+    <color name="text_tab_active">@color/palette_red_100</color>
+    <color name="dim_lighter">@color/palette_dim_200</color>
+
+
+    <color name="view_status_primary">@color/palette_green_300</color>
+    <color name="view_status_secondary">@color/palette_red_300</color>
+    <color name="text_status_failure">@color/red</color>
+
+    <color name="text_dropdown_selected_primary">@color/palette_black_100</color>
+
+</resources>
