@@ -3,26 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.ainsigne.caa_newsapp.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/homeFragment"
+        android:name="com.ainsigne.home.ui.HomeFragment"
+        tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/home_to_details"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/pull_up_from_bottom"
+            app:exitAnim="@anim/pull_bottom_from_up"
+            app:popEnterAnim="@anim/pull_up_from_bottom"
+            app:popExitAnim="@anim/pull_bottom_from_up"
+
+            />
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.ainsigne.caa_newsapp.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/detailsFragment"
+        android:name="com.ainsigne.details.ArticleDetailsFragment"
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+        tools:layout="@layout/fragment_article_details">
+        <argument
+            android:name="articleData"
+            android:defaultValue="@null"
+            app:argType="com.ainsigne.domain.navigation.ArticleDetails"
+            app:nullable="true" />
     </fragment>
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.ainsigne.splash.ui.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/splash_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/pull_up_from_bottom"
+            app:exitAnim="@anim/pull_bottom_from_up"
+            app:popEnterAnim="@anim/pull_up_from_bottom"
+            app:popExitAnim="@anim/pull_bottom_from_up"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
 </navigation>

@@ -1,2 +1,10 @@
 rootProject.name = "CAA_NewsApp"
 include ':app'
+include ':ui'
+include ':common'
+include ':domain'
+include ':data'
+include ':core'
+include ':features:home'
+include ':features:splash'
+include ':features:details'

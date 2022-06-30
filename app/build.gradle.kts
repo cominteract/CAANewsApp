@@ -1,6 +1,4 @@
-import Versions.APPLICATION_ID
-import Versions.COMPILE_SDK
-import Versions.MIN_SDK
+
 
 plugins {
     id("com.android.application")
@@ -101,7 +99,15 @@ spotless {
 }
 
 dependencies {
+    implementation(project(":ui"))
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(":core"))
+    implementation(project(":common"))
+    implementation(project(":domain"))
+    implementation(project(":data"))
+    implementation(project(":features:home"))
+    implementation(project(":features:splash"))
+    implementation(project(":features:details"))
     implementation(Libraries.appCompat)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.materialDesign)

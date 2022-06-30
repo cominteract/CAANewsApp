@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HomeFragment">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/text_primary"
+        android:id="@+id/button_toggle_country"
+        app:singleSelection="true"
+        app:checkedButton="@id/button_toggle_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <com.google.android.material.button.MaterialButton
+            android:text="@string/text_us"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:textSize="@dimen/font_size_body"
+            android:textColor="@color/text_label_secondary"
+            android:id="@+id/button_toggle_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_toggle_canada"
+            android:text="@string/text_canada"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:textSize="@dimen/font_size_body"
+            android:textColor="@color/text_label_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/button_toggle_country"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/recycler_articles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_article"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
