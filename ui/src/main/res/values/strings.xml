@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="text_confirmation_success_title">Success</string>
-    <string name="text_confirmation_info_title">Info</string>
-    <string name="text_confirmation_error_title">Error</string>
-</resources>

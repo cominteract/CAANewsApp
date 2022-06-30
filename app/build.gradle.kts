@@ -1,4 +1,6 @@
-
+import Versions.APPLICATION_ID
+import Versions.COMPILE_SDK
+import Versions.MIN_SDK
 
 plugins {
     id("com.android.application")

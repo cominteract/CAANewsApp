@@ -1,4 +1,2 @@
 rootProject.name = "CAA_NewsApp"
 include ':app'
-include ':ui'
-include ':common'
