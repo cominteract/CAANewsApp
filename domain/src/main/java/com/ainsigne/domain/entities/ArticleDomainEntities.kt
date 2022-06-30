@@ -1,5 +1,7 @@
 package com.ainsigne.domain.entities
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.ainsigne.common.utils.extension.EMPTY
 
 sealed class ArticleDomainEntities {
@@ -22,7 +24,10 @@ sealed class ArticleDomainEntities {
      * @param author [String] author name
      * @param publishedAt [String] date published
      */
+    @Entity(tableName = "news_article_list")
     data class Article (
+        @PrimaryKey(autoGenerate = true)
+        val id: Int,
         val title: String = EMPTY,
         val source: ArticleSource?,
         val author: String = EMPTY,
