@@ -1,12 +1,16 @@
 package com.ainsigne.data.repository.headline
 
 import com.ainsigne.common.utils.extension.EMPTY
+import com.ainsigne.common.utils.extension.compareExceedingMinutes
 import com.ainsigne.common.utils.network.NetworkStatus
 import com.ainsigne.data.local.datasource.headline.HeadlineLocalSource
+import com.ainsigne.data.local.datasource.time.TimeLocalSource
+import com.ainsigne.data.local.datasource.time.TimeSource
 import com.ainsigne.data.local.datastore.CAANewsAppDataStore
 import com.ainsigne.data.local.datastore.DataStoreKeys
 import com.ainsigne.data.remote.datasource.HeadlineRemoteSource
-import com.ainsigne.data.remote.utils.networkBoundResource
+import com.ainsigne.data.utils.getHeadlineRefresh
+import com.ainsigne.data.utils.networkBoundResource
 import com.ainsigne.domain.entities.ArticleDomainEntities
 import com.ainsigne.domain.repository.HeadlineRepository
 import kotlinx.coroutines.DelicateCoroutinesApi
@@ -21,12 +25,14 @@ import kotlinx.coroutines.runBlocking
 class HeadlineRepositoryImpl(
     private val localSource: HeadlineLocalSource,
     private val remoteSource: HeadlineRemoteSource,
-    private val dataStore: CAANewsAppDataStore
+    private val dataStore: CAANewsAppDataStore,
+    private val timeLocalSource: TimeLocalSource
 ) : HeadlineRepository {
 
 
     override suspend fun forceRefreshHeadlines(): Flow<Boolean> {
-        return flowOf(true)
+        dataStore.write(DataStoreKeys.KEY_REFRESH_HEADLINE, timeLocalSource.getCurrentTime(TimeSource.FORCE_REFRESH))
+        return flowOf(minutesExceeded)
     }
 
     override suspend fun getHeadlines(): Flow<NetworkStatus<List<ArticleDomainEntities.Article>>> {
@@ -40,10 +46,10 @@ class HeadlineRepositoryImpl(
                 localSource.insertArticles(articles.orEmpty())
             },
             shouldFetch = {
-                Pair(true, EMPTY)
+                minutesExceededPair
             },
             shouldClear = { _, _ ->
-                true
+                minutesExceeded
             },
             query = {
                 flow {
@@ -55,6 +61,17 @@ class HeadlineRepositoryImpl(
                 localSource.deleteArticles()
             }
         )
+    }
+
+    private val minutesExceededPair = runBlocking {
+        Pair(
+            dataStore.getHeadlineRefresh()?.compareExceedingMinutes(timeLocalSource.getCurrentTime(TimeSource.FETCH_OR_CLEAR)) ?: true,
+            "${dataStore.getHeadlineRefresh()} | ${timeLocalSource.getCurrentTime(TimeSource.FETCH_OR_CLEAR)}"
+        )
+    }
+
+    private val minutesExceeded = runBlocking {
+        dataStore.getHeadlineRefresh()?.compareExceedingMinutes(timeLocalSource.getCurrentTime(TimeSource.FETCH_OR_CLEAR)) ?: true
     }
 
 

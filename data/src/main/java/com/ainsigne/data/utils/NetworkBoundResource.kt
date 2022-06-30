@@ -1,4 +1,4 @@
-package com.ainsigne.data.remote.utils
+package com.ainsigne.data.utils
 
 
 import com.ainsigne.common.utils.CONNECT_EXCEPTION

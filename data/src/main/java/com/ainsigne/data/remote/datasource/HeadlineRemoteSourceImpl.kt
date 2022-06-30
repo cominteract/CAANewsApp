@@ -2,7 +2,7 @@ package com.ainsigne.data.remote.datasource
 
 import com.ainsigne.common.utils.network.NetworkStatus
 import com.ainsigne.data.remote.api.HeadlineService
-import com.ainsigne.data.remote.utils.safeApiCall
+import com.ainsigne.data.utils.safeApiCall
 import com.ainsigne.domain.entities.ArticleDomainEntities
 
 class HeadlineRemoteSourceImpl(val service: HeadlineService) : HeadlineRemoteSource {

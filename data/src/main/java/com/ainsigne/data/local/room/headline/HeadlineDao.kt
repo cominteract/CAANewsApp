@@ -27,4 +27,11 @@ interface HeadlineDao {
     @Query("SELECT * FROM news_article_list")
     suspend fun queryArticles(): List<ArticleDomainEntities.Article>
 
+    /**
+     * Delete articles data from local db
+     * @return [Int] deleted article list indication
+     */
+    @Query("DELETE FROM news_article_list")
+    suspend fun deleteArticles(): Int
+
 }

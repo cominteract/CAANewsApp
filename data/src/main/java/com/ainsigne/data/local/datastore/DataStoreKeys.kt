@@ -9,7 +9,9 @@ object DataStoreKeys {
     // data store name
     const val NAME = "caanewsapp_dstore"
 
-    // key for profile id used in profile data retrieval
+    // key for profile country code used in profile data retrieval
     val KEY_PROFILE_COUNTRY_CODE = stringPreferencesKey(name = "caanews_profile_country_code")
 
+    // key for refreshing headline
+    val KEY_REFRESH_HEADLINE = longPreferencesKey(name = "caanews_profile_headline_refresh")
 }
